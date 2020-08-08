@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body {background-color: #7395AE; }
+  h1{
+    background-color: #B1A296;
+    //border: 2px solid blue;
+    border-radius: 10px;
+    color: #375b91;
+    padding: 70px;
+    text-align: center;
+    font-style: oblique;
+    font-family: arial;
+  }
+  p1{
+    font-family: arial ;
+    font-style: oblique;
+    font-size: 20;
+    color: white;
+
+  }
+
+  .blockContain {
+    text-align: left;
+    padding-top:  100px;
+    padding-left: 0px;
+
+    background-color: inherit;
+
+
+  }
+
+
+ .outputLabel {
+   padding-top: 10px;
+   color: black ;
+   text-align: left;
+   font-family: arial cursive;
+   width: 20%;
+   padding-left: 120px;
+
+   border:1px solid black;
+   border-radius: none;
+   margin: 20% ;
+   margin-top: 1000px;
+   background-color: #ced5e0;
+   display: inline;
+   margin-right: 180px;
+
+
+
+ }
+.outputLabelset{
+  margin-top: 30px;
+  width: 75%;
+  border-radius: 70px;
+  background-color: #375b91;
+}
+
+  #answerLabelPercent1, #answerLabelPercent{
+    display:inline;
+  }
+
+  #answerLabelPercent {
+    color: black ;
+    text-align: center;
+    font-family: arial cursive;
+    width: 10%;
+    padding: 0 px;
+    border: 10px solid gray;
+    border-radius: 80px;
+    margin: 70px ;
+
+    background-color: gray;
+
+  }
+
+  #answerLabelPercent1 {
+    color: black ;
+    text-align: center;
+    font-family: arial cursive;
+    width: 100px;
+    padding: 1 px;
+    border: 1px solid gray;
+    margin: 0 ;
+    background-color: gray;
+  }
+
+
+
+
+.button{
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer
+
+}
+
+
+.button1{
+  background-color: #375b91;
+  color: black
+  boder: 2px  blue;
+}
+
+.button1:hover {
+  background-color: #B1A296;
+  color:white;
+}
+
+
+  input[type=text], select {
+    width: 80%;
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 100px;
+    font-family: arial;
+    font-size: 20px;
+
+
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  label[type = text]{
+    font-family: arial;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    color: #375b91;
+
+  }
+
+
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  ul {
+    width: 50%;
+    background-color: #B1A296;
+    border: 13px solid black;
+    border-radius: 90px;
+    box-sizing: border-box;
+
+  }
+  ul li{
+    width: 45%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+
+
+
+
+  }
+  ul li > * {
+    width: 100%;
+  }
+
+  table{font-family: arial;
+  border-collapse: collapse;
+width: 80%;
+}
+td,th{
+  border: 10px solid #dddddd;
+  text-align: center;
+  padding : 10px;
+}
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  div
+  </style>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+
+  <img src="images/backround.jpeg" alt="">
+
+<h1 id="title" >12.0 Weighted grade calculator</h1>
+<h3>
+  <p1> Enter grade percentage and weight and press calculate to see your current grade(%) and its 12.0 conversion</p1>
+
+
+
+
+
+
+
+<ul>
+  <li>
+    <label type = "text"> Grade(%)</label>
+
+  </li>
+  <li>
+    <label type = "text"> Weight </label>
+
+  </li>
+  <li>
+
+    <input type = "text" id="G1"/>
+
+  </li>
+  <li>
+
+    <input type = "text" id="W1" />
+  </li>
+
+  <li>
+    <input type = "text" id = "G2" />
+  </li>
+
+  <li>
+
+    <input type = "text" id= "W2" />
+  </li>
+  <li>
+
+    <input type = "text" id = "G3" />
+  </li>
+  <li>
+
+    <input type = "text" id = "W3"/>
+  </li>
+  <li>
+
+    <input type = "text" id = "G4" />
+  </li>
+  <li>
+
+    <input type = "text" id = "W4" />
+  </li>
+</ul>
+
+<button class = "button button1" name="click_2"  onclick= displayG1()>
+  Calculate
+
+ </button>
+
+<div class = "blockContain">
+
+   <div id = "answerLabelPercent">
+     Overall Grade(%)
+   </div>
+   <div id = "answerLabelPercent">
+    12.0 Conversion
+   </div>
+
+</div>
+
+<div class = "outputLabelset">
+
+   <div class = "outputLabel" id= "percentOut">
+      winner siwn fdfj fiojdfsojfoid n
+   </div>
+   <div class = "outputLabel" id = "conversionOut">
+
+   </div>
+
+</div>
+
+
+</body>
+</html>
